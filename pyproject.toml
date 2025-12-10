@@ -1,39 +1,9 @@
 [project]
-name = "predelo-python-template"
+name = "implicit-neural-representation"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "httpx>=0.28.1",
-    "pytest>=8.3.5",
+    "torch>=2.9.1",
 ]
-
-[dependency-groups]
-types = [
-    "mypy>=1.15.0",
-]
-dev = [
-    "pre-commit>=4.2.0",
-    "pytest>=8.3.5",
-]
-lint = [
-    "ruff>=0.11.11",
-]
-format = [
-    "black>=25.1.0",
-]
-[tool.black]
-line-length = 88
-target-version = ["py311"]
-
-[tool.ruff]
-line-length = 88
-target-version = "py311"
-extend-select = ["I"]      # import-sorting
-extend-ignore = ["D203"]   # example: ignore one docstring rule
-
-[tool.mypy]
-python_version = "3.11"
-strict = true
-
