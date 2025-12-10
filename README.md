@@ -8,15 +8,19 @@ Learning INR by building it step-by-step in PyTorch.
 .
 ├── src/inr/
 │   ├── positional_encoding.py         # Step 2: Positional encoding
-│   └── network.py                     # Step 3: MLP network
+│   ├── network.py                     # Step 3: MLP network
+│   └── data.py                        # Step 4: Data preparation
 ├── tests/
-│   ├── test_positional_encoding.py    # Tests for encoding
-│   └── test_network.py                # Tests for network
-├── test_image.jpg                     # Sample image for training
-├── POSITIONAL_ENCODING_EXPLAINED.md   # Encoding code explanation
-├── NETWORK_EXPLAINED.md               # Network code explanation
+│   ├── test_positional_encoding.py
+│   ├── test_network.py
+│   └── test_data.py
+├── config.py                          # Network & training configuration
+├── test_image.jpg                     # Sample image
+├── POSITIONAL_ENCODING_EXPLAINED.md
+├── NETWORK_EXPLAINED.md
+├── DATA_EXPLAINED.md
 ├── CLAUDE.md                          # Step-by-step guide
-└── inr_implementation.md              # Theory and concepts
+└── inr_implementation.md              # Theory
 ```
 
 ## Steps
@@ -24,7 +28,7 @@ Learning INR by building it step-by-step in PyTorch.
 - ✅ Step 1: Environment Setup
 - ✅ Step 2: Positional Encoding
 - ✅ Step 3: MLP Network
-- ⏳ Step 4: Data Preparation
+- ✅ Step 4: Data Preparation
 - ⏳ Step 5: Training Loop
 - ⏳ Step 6: Inference
 - ⏳ Step 7: Visualization
@@ -33,11 +37,9 @@ Learning INR by building it step-by-step in PyTorch.
 ## Running Tests
 
 ```bash
-# Test positional encoding
 uv run python tests/test_positional_encoding.py
-
-# Test network
 uv run python tests/test_network.py
+uv run python tests/test_data.py
 ```
 
 ## Usage
