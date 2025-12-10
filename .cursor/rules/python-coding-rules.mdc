@@ -1,0 +1,28 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+## General Coding Guideline
+### Description:
+Requires detailed Google-style docstrings for all functions, methods, and classes.
+### globs:
+**/*.py
+
+
+- For any python file, be sure to ALWAYS add typing annotations to each function or class
+- Be sure to include return types when necessary.
+- Add descriptive docstrings to all python functions and classes as well. Please use pep257 convention.
+- When writing tests, make sure that you ONLY use pytest or pytest plugins, do NOT use the unittest module
+- All tests should have typing annotations as well.
+- All tests should be in ./tests. Be sure to create all necessary files and folders
+- All tests should be fully annotated and should contain docstrings
+- Use formatters and linters specified under pyproject.toml
+
+## Modular Deisgn
+description: Promotes modular design with distinct files for models, services, controllers, and utilities.
+globs: *
+
+- Split logic into functions, classes, and modules.
+- Avoid long scripts with intertwined logic.
+- Follow single-responsibility principle (SRP).

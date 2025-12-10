@@ -1,0 +1,29 @@
+minimum_pre_commit_version: "3.6.0"
+repos:
+  # Keep uv.lock in sync if someone edits pyproject.toml
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.7.8
+    hooks:
+      - id: uv-lock
+
+  # Ruff – lint first, then format
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.11
+    hooks:
+      - id: ruff-check
+        args: [--fix]          # auto-fix, but fail if changes were needed
+      - id: ruff-format
+
+  # Black – acts as safety net
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 25.1.0
+    hooks:
+      - id: black
+        language_version: python3.11
+
+  # Mypy type-check (optional)
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.10.0
+    hooks:
+      - id: mypy
+
